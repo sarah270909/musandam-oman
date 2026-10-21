@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التراث العُماني | مسندم</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f5ef;
+        }
+
+        .heritage-hero {
+            min-height: 470px;
+            padding: 75px 9%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background:
+                linear-gradient(90deg, #073b40e8, #073b4055),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Khasab%20Fort.jpg?width=1800");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .heritage-hero .gold-label {
+            color: #e7c991;
+            font-weight: 800;
+        }
+
+        .heritage-hero h1 {
+            font-family: 'Amiri', serif;
+            font-size: clamp(45px, 7vw, 78px);
+            line-height: 1.5;
+            margin: 12px 0;
+        }
+
+        .heritage-hero p {
+            max-width: 650px;
+            line-height: 2.2;
+            font-size: 17px;
+        }
+
+        .heritage-section {
+            padding: 70px 8%;
+        }
+
+        .heritage-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .heritage-heading span {
+            color: #a58245;
+            font-weight: 800;
+        }
+
+        .heritage-heading h2 {
+            font-family: 'Amiri', serif;
+            color: #073b40;
+            font-size: clamp(35px, 5vw, 48px);
+            margin: 8px 0;
+        }
+
+        .heritage-heading p {
+            color: #657674;
+            line-height: 2;
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .heritage-card {
+            background: white;
+            border: 1px solid #e7e0d3;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.35s;
+        }
+
+        .heritage-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px #073b4020;
+        }
+
+        .heritage-image {
+            height: 245px;
+            overflow: hidden;
+            background: #d8d2c4;
+        }
+
+        .heritage-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .heritage-card:hover .heritage-image img {
+            transform: scale(1.06);
+        }
+
+        .heritage-info {
+            padding: 24px;
+        }
+
+        .heritage-number {
+            color: #a58245;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .heritage-info h3 {
+            font-family: 'Amiri', serif;
+            font-size: 30px;
+            color: #073b40;
+            margin: 8px 0;
+        }
+
+        .heritage-info p {
+            color: #657674;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .heritage-banner {
+            margin: 0 8% 70px;
+            padding: 38px;
+            border-radius: 15px;
+            background: #073b40;
+            color: white;
+            text-align: center;
+        }
+
+        .heritage-banner h2 {
+            font-family: 'Amiri', serif;
+            font-size: 37px;
+            margin-bottom: 12px;
+        }
+
+        .heritage-banner p {
+            max-width: 750px;
+            margin: auto;
+            color: #e0e9e5;
+            line-height: 2.2;
+        }
+
+        .source-note {
+            margin-top: 25px;
+            text-align: center;
+            color: #657674;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .heritage-hero {
+                padding: 55px 7%;
+            }
+
+            .heritage-section {
+                padding: 45px 6%;
+            }
+
+            .heritage-banner {
+                margin: 0 6% 45px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">مُسندم <span>✦</span></h2>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="cities.html">المدن</a>
+        <a href="hotels.html">الفنادق</a>
+        <a href="legacies.html">التراث</a>
+        <a href="locations.html">المواقع</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="heritage-hero">
+        <span class="gold-label">من ذاكرة عُمان</span>
+
+        <h1>مسندم<br>أصالةٌ لا تُنسى</h1>
+
+        <p>
+            بين الحصون التاريخية والسفن الخشبية التقليدية،
+            تحكي مسندم قصة الإنسان العُماني وعلاقته بالبحر
+            والأرض، وتحافظ على إرثٍ يمتد عبر الأجيال.
+        </p>
+    </section>
+
+    <section class="heritage-section">
+
+        <div class="heritage-heading">
+            <span>حكايات من أرض عُمان</span>
+            <h2>تراثٌ له هويته الخاصة</h2>
+            <p>
+                اكتشفي معالم حقيقية من مسندم تعكس تاريخها
+                البحري وتراثها المعماري.
+            </p>
+        </div>
+
+        <div class="heritage-grid">
+
+            <!-- قلعة خصب -->
+            <article class="heritage-card">
+                <div class="heritage-image">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Khasab%20Fort.jpg?width=1000"
+                        alt="قلعة خصب التاريخية في مسندم"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="heritage-info">
+                    <span class="heritage-number">01 · التاريخ والعمارة</span>
+                    <h3>قلعة خصب</h3>
+                    <p>
+                        من أبرز المعالم التاريخية في مسندم.
+                        تضم القلعة معروضات تُعرّف الزائر
+                        بالحياة الاجتماعية والتراث المحلي،
+                        وتُبرز أهمية خصب التاريخية.
+                    </p>
+                </div>
+            </article>
+
+            <!-- قلعة بخاء -->
+            <article class="heritage-card">
+                <div class="heritage-image">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Bukha%20Castle%20%28II%29%20%285732550961%29.jpg?width=1000"
+                        alt="قلعة بخاء في محافظة مسندم"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="heritage-info">
+                    <span class="heritage-number">02 · الحصون العُمانية</span>
+                    <h3>قلعة بخاء</h3>
+                    <p>
+                        يعكس هذا المعلم التراث المعماري
+                        الدفاعي في محافظة مسندم، ويذكّر
+                        بأهمية الحصون في حماية المناطق
+                        الساحلية عبر التاريخ.
+                    </p>
+                </div>
+            </article>
+
+            <!-- السفن التقليدية -->
+            <article class="heritage-card">
+                <div class="heritage-image">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Traditional%20Dhow%20in%20Khasab.jpg?width=1000"
+                        alt="سفينة شراعية تقليدية في خصب"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="heritage-info">
+                    <span class="heritage-number">03 · التراث البحري</span>
+                    <h3>السفن التقليدية</h3>
+                    <p>
+                        ارتبط سكان مسندم بالبحر من خلال
+                        الصيد والملاحة والتنقل بين السواحل.
+                        وتبقى السفن الخشبية التقليدية رمزًا
+                        لهذا الإرث البحري العريق.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="source-note">
+            الصور لمعالم وقوارب مرتبطة بمسندم، ومصدرها
+            Wikimedia Commons. قد تختلف شروط إعادة استخدام
+            كل صورة؛ راجعي صفحة الصورة لمعرفة الترخيص.
+        </p>
+
+    </section>
+
+    <section class="heritage-banner">
+        <h2>تراثنا هويتنا</h2>
+        <p>
+            إن المحافظة على الحصون التاريخية والسفن
+            التقليدية والعادات الأصيلة مسؤولية مشتركة.
+            فتراث عُمان ليس مجرد صفحات من الماضي،
+            بل جزء من هويتنا التي نفخر بها وننقلها للأجيال القادمة.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>مُسندم ✦ جمال عُمان الذي يستحق الاكتشاف</p>
+</footer>
+
+</body>
+</html>

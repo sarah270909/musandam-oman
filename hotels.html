@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فنادق مسندم | اكتشف عُمان</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f5ef;
+        }
+
+        .hotel-hero {
+            min-height: 460px;
+            padding: 80px 9%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            background:
+                linear-gradient(90deg, #073b40e8, #073b4050),
+                url("https://media.sixsenses.com/B60H3R33/at/kpc4b4czhjc25jqhqn7n323/Aerial_View.jpg?fit=crop&height=405&width=648");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hotel-hero h1 {
+            font-family: 'Amiri', serif;
+            font-size: clamp(45px, 7vw, 78px);
+            line-height: 1.45;
+            margin: 15px 0;
+        }
+
+        .hotel-hero p {
+            max-width: 600px;
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .gold-label {
+            color: #e6c990;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hotel-button {
+            display: inline-block;
+            width: fit-content;
+            margin-top: 25px;
+            padding: 13px 24px;
+            border-radius: 7px;
+            background: #d7b77c;
+            color: #073b40;
+            text-decoration: none;
+            font-weight: 800;
+            transition: 0.3s;
+        }
+
+        .hotel-button:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        .hotel-section {
+            padding: 75px 8%;
+        }
+
+        .hotel-heading {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .hotel-heading span {
+            color: #a58245;
+            font-weight: 800;
+        }
+
+        .hotel-heading h2 {
+            font-family: 'Amiri', serif;
+            color: #073b40;
+            font-size: clamp(34px, 5vw, 48px);
+            margin: 8px 0;
+        }
+
+        .hotel-heading p {
+            color: #657674;
+            line-height: 2;
+        }
+
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 26px;
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e8e2d6;
+            box-shadow: 0 5px 20px #073b400a;
+            transition: transform 0.35s, box-shadow 0.35s;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 18px 35px #073b4020;
+        }
+
+        .hotel-photo {
+            height: 235px;
+            position: relative;
+            overflow: hidden;
+            background: #d8e0dc;
+        }
+
+        .hotel-photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .hotel-card:hover .hotel-photo img {
+            transform: scale(1.06);
+        }
+
+        .photo-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f7f5eff0;
+            color: #073b40;
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .hotel-info {
+            padding: 25px;
+        }
+
+        .hotel-location {
+            color: #a58245;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .hotel-info h3 {
+            font-family: 'Amiri', serif;
+            font-size: 29px;
+            color: #073b40;
+            margin: 8px 0;
+        }
+
+        .hotel-info p {
+            color: #657674;
+            line-height: 2;
+            font-size: 14px;
+            min-height: 84px;
+        }
+
+        .hotel-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #d7b77c;
+            color: #0b6267;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .hotel-link:hover {
+            color: #a58245;
+        }
+
+        .experience {
+            margin: 0 8% 70px;
+            padding: 38px;
+            border-radius: 14px;
+            background: #073b40;
+            color: white;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .experience h2 {
+            font-family: 'Amiri', serif;
+            font-size: 35px;
+            margin: 0 0 10px;
+        }
+
+        .experience p {
+            color: #e0e9e5;
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .experience-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .experience-item {
+            border: 1px solid #ffffff30;
+            border-radius: 8px;
+            padding: 15px 10px;
+            text-align: center;
+            color: #f5e4bf;
+            font-size: 14px;
+        }
+
+        .hotel-footer {
+            padding: 25px;
+            text-align: center;
+            background: #052f33;
+            color: white;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .hotel-hero {
+                min-height: 390px;
+                padding: 55px 7%;
+            }
+
+            .hotel-section {
+                padding: 50px 6%;
+            }
+
+            .experience {
+                margin: 0 6% 45px;
+                padding: 25px;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">مُسندم <span>✦</span></h2>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="cities.html">المدن</a>
+        <a href="hotels.html">الفنادق</a>
+        <a href="legacies.html">التراث</a>
+        <a href="locations.html">المواقع</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hotel-hero">
+        <span class="gold-label">إقامة بين البحر والجبال</span>
+
+        <h1>حين تصبح الإقامة<br>جزءًا من الحكاية</h1>
+
+        <p>
+            اكتشفي أماكن الإقامة في مسندم، حيث تلتقي
+            الضيافة العُمانية بإطلالات البحر الفيروزي
+            والجبال الشامخة، لتمنحك تجربة لا تُنسى.
+        </p>
+
+        <a href="#hotels" class="hotel-button">
+            اكتشفي أماكن الإقامة ←
+        </a>
+    </section>
+
+    <section class="hotel-section" id="hotels">
+
+        <div class="hotel-heading">
+            <span>ضيافة بطابع مختلف</span>
+            <h2>فنادق ومنتجعات مسندم</h2>
+            <p>
+                تعرّفي على ثلاثة خيارات للإقامة في المحافظة،
+                واكتشفي ما يميز كل مكان.
+            </p>
+        </div>
+
+        <div class="hotel-grid">
+
+            <!-- الفندق الأول -->
+            <article class="hotel-card">
+
+                <div class="hotel-photo">
+                    <img
+                        src="https://azimuthotelsoman.com/resize/images/upload/bfe02da92f1c8f942ee9c9bf2b842019.webp"
+                        alt="صورة من منتجع أتانا مسندم"
+                        loading="lazy"
+                    >
+                    <span class="photo-tag">خصب</span>
+                </div>
+
+                <div class="hotel-info">
+                    <span class="hotel-location">منتجع ساحلي</span>
+                    <h3>أتانا مسندم</h3>
+
+                    <p>
+                        منتجع في خصب يتميز بطابع معماري مستوحى
+                        من القرية العُمانية، مع إطلالات على
+                        الجبال والبحر وتجارب بحرية متنوعة.
+                    </p>
+
+                    <a
+                        class="hotel-link"
+                        href="https://azimuthotelsoman.com/en/khasab/azimut-hotel-musandam"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        اكتشفي المنتجع ←
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- الفندق الثاني -->
+            <article class="hotel-card">
+
+                <div class="hotel-photo">
+                    <img
+                        src="https://media.sixsenses.com/B60H3R33/at/kpc4b4czhjc25jqhqn7n323/Aerial_View.jpg?fit=crop&height=405&width=648"
+                        alt="منظر جوي لخليج زيغي والمنتجع بين الجبال والبحر"
+                        loading="lazy"
+                    >
+                    <span class="photo-tag">دبا · خليج زيغي</span>
+                </div>
+
+                <div class="hotel-info">
+                    <span class="hotel-location">منتجع فاخر</span>
+                    <h3>سيكس سينسز زيغي باي</h3>
+
+                    <p>
+                        منتجع فاخر في شبه جزيرة مسندم، يقع
+                        بين الجبال والشاطئ الرملي، ويضم فللًا
+                        وخيارات إقامة خاصة وتجارب طبيعية.
+                    </p>
+
+                    <a
+                        class="hotel-link"
+                        href="https://www.sixsenses.com/en/hotels-resorts/middle-east-africa/oman/zighy-bay/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        اكتشفي المنتجع ←
+                    </a>
+                </div>
+
+            </article>
+
+            <!-- الفندق الثالث -->
+            <article class="hotel-card">
+
+                <div class="hotel-photo">
+                    <img
+                        src="https://media.sixsenses.com/B60H3R33/at/63m3nz4jvf28nr2g4556npgc/Salt_Water_Pool_aerial.jpg?fit=crop&height=405&width=648"
+                        alt="مسبح بإطلالة طبيعية في منتجع خليج زيغي"
+                        loading="lazy"
+                    >
+                    <span class="photo-tag">تجربة المنتجع</span>
+                </div>
+
+                <div class="hotel-info">
+                    <span class="hotel-location">الراحة والاسترخاء</span>
+                    <h3>تجربة الإقامة الساحلية</h3>
+
+                    <p>
+                        استمتعي بمشهد المسبح والمساحات الخارجية
+                        في منتجع خليج زيغي، مع أجواء تجمع
+                        بين الطبيعة والهدوء والخصوصية.
+                    </p>
+
+                    <a
+                        class="hotel-link"
+                        href="https://www.sixsenses.com/en/hotels-resorts/middle-east-africa/oman/zighy-bay/gallery/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        شاهدي معرض الصور ←
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+    <section class="experience">
+
+        <div>
+            <h2>أكثر من مجرد إقامة</h2>
+            <p>
+                تتميز مسندم بطبيعتها البحرية والجبلية،
+                ويمكن للزوار استكشاف الخلجان والقيام
+                برحلات بحرية وتجربة بعض الأنشطة الطبيعية.
+                تختلف الأنشطة والخدمات بحسب مكان الإقامة.
+            </p>
+        </div>
+
+        <div class="experience-list">
+            <div class="experience-item">✦ إطلالات بحرية</div>
+            <div class="experience-item">✦ مناظر جبلية</div>
+            <div class="experience-item">✦ رحلات بحرية</div>
+            <div class="experience-item">✦ ضيافة عُمانية</div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="hotel-footer">
+    <p>مُسندم ✦ جمال عُمان الذي يستحق الاكتشاف</p>
+</footer>
+
+</body>
+</html>
